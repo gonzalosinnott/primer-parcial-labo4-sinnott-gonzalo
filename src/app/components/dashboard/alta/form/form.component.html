@@ -1,0 +1,67 @@
+<div class="row align-items-md-stretch">
+    <div class="col-md-8">
+        <form class="form was-validated" [formGroup]="form">
+            <div class="row align-items-md-stretch">
+                <div class="form-group col-md-12">
+                    <label for="code" class="form-label">NOMBRE</label>
+                    <input type="name" class="form-control" id="name" aria-describedby="name" required=""
+                        formControlName="name">
+                    <div class="invalid-feedback">
+                        Ingrese nombre.
+                    </div>
+                </div>               
+
+
+            </div>
+
+            <br>
+
+            <div class="row align-items-md-stretch">
+
+                <div class="form-group col-md-4">
+                    <label for="id" class="form-label">DNI</label>
+                    <input type="number" class="form-control" id="id" aria-describedby="id" required="" min="00000001"
+                        max="99999999" formControlName="id">
+                    <div class="invalid-feedback">
+                        Ingrese dni.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="age" class="form-label">EDAD</label>
+                    <input type="number" class="form-control" id="age" aria-describedby="age" required="" min="18"
+                        max="65" formControlName="age">
+                    <div class="invalid-feedback">
+                        Ingrese edad (18-65).
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="capacity" class="form-label">CAPACIDAD</label>
+                    <input type="number" class="form-control" id="capacity" aria-describedby="capacity" required="" min="1" max="1000" formControlName="capacity">
+                    <div class="invalid-feedback">
+                        Ingrese capacidad (1-1000).
+                    </div>
+                </div>               
+            </div>
+            <br>
+            <div class="form-group col-md-3">
+                <div class="form-group form-check form-switch">
+                    <label class="ownTransport" for="edible">UNIDAD PROPIA</label>
+                    <input class="form-check-input" type="checkbox" id="ownTransport" formControlName="ownTransport">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary" style="width: 80%;" (click)="onSubmit()">ENVIAR</button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <div class="col-md-4" style="text-align: center;">
+        <app-paises (newCountryEvent)="selectCountry($event)"></app-paises>
+    </div>
+</div>
