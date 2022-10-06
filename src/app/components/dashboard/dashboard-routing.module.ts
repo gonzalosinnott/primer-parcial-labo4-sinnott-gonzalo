@@ -12,7 +12,7 @@ const routes: Routes = [
     { path: '', pathMatch: 'full',component: MainPageComponent },
     { path: 'alta', pathMatch: 'full',component: AltaComponent },
     { path: 'detalle', pathMatch: 'full',component: DetalleComponent },
-    { path: 'producto', pathMatch: 'full',component: ProductoComponent },
+    { path: 'producto', pathMatch: 'full',component: ProductoComponent},
   ] },
   { path: '**', pathMatch: 'full', component: NotFoundComponent }
 
