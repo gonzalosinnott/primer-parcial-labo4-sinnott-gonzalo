@@ -13,6 +13,7 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { ListaComponent } from './detalle/lista/lista.component';
 import { DetalleEmpleadoComponent } from './detalle/detalle-empleado/detalle-empleado.component';
 import { DetallePaisComponent } from './detalle/detalle-pais/detalle-pais.component';
+import { ProductoComponent } from './producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DetallePaisComponent } from './detalle/detalle-pais/detalle-pais.compon
     ListaComponent,
     DetalleEmpleadoComponent,
     DetallePaisComponent,
+    ProductoComponent,
   ],
   imports: [
     CommonModule,

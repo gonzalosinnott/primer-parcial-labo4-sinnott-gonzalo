@@ -1,0 +1,128 @@
+<div class="container py-4">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">COCINAR PIZZA</h4>
+                </div>
+                <div class="card-body">                 
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary" (click)="openPopupPreparar()" >COCINAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">MODIFICAR PIZZA</h4>
+                </div>
+                <div class="card-body">
+                    <button type="button" class="w-100 btn btn-lg btn-primary" (click)="openPopupModificar()">MODIFICAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">BORRAR PIZZA</h4>
+                </div>
+                <div class="card-body">
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary" (click)="openPopupBorrar()">BORRAR</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+   
+    <h2 class="display-6 text-center mb-4">LISTADO DE PIZZAS</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;">PIZZA N°:</th>
+            <th style="width: 22%;">INGREDIENTE 1</th>
+            <th style="width: 22%;">INGREDIENTE 2</th>
+            <th style="width: 22%;">INGREDIENTE 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>      
+          </tr>         
+        </tbody>       
+      </table>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStylePreparar}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">PREPARAR PIZZA</h4>
+      </div>
+      <div class="modal-body">
+        <h6>WIP</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopupPreparar()">
+          CERRAR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyleModificar}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">MODIFICAR PIZZA</h4>
+      </div>
+      <div class="modal-body">
+        <h6>WIP</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopupModificar()">
+          CERRAR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyleBorrar}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">BORRAR PIZZA</h4>
+      </div>
+      <div class="modal-body">
+        <h6>WIP</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopupBorrar()">
+          CERRAR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
