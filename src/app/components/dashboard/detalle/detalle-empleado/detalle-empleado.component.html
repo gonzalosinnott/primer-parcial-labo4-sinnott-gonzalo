@@ -1,0 +1,8 @@
+<h6>DETALLE DEL EMPLEADO {{employeeCode}}</h6>
+<hr>
+<p *ngIf="employee != null">NOMBRE: {{employee.name}}</p>
+<p *ngIf="employee != null">DNI:{{employee.id}}</p>
+<p *ngIf="employee != null">PAIS: {{employee.country}}</p>
+<p *ngIf="employee != null">EDAD: {{employee.age}}</p>
+<p *ngIf="employee != null">CAPACIDAD DE CARGA: {{employee.capacity}} unidades</p>
+<p *ngIf="employee != null">VEHICULO PROPIO: {{employee.ownTransport}}</p>

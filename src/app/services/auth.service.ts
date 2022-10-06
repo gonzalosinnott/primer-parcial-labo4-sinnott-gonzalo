@@ -135,4 +135,54 @@ export class AuthService {
       merge: true,
     });
   } 
+
+  getAllEmployees() {
+    const data = [];
+    return firebase.firestore().collection('empleados')
+                               .get()
+                               .then((querySnapshot) => {
+                                 querySnapshot.forEach((doc) => {
+                                  data.push(doc.data());
+                                });
+                                 return data;
+                               })
+                               .catch((error) => {
+                                 console.log("Error getting documents: ", error);
+                               });
+  }
+
+  getEmployeeData(name: any) {
+    const data = [];
+    return firebase.firestore().collection('empleados')
+                               .where('name', '==', name) 
+                               .limit(1)                              
+                               .get()
+                               .then((querySnapshot) => {
+                                 querySnapshot.forEach((doc) => {
+                                  data.push(doc.data());
+
+                               });
+                                 return data;
+                               })
+                               .catch((error) => {
+                                 console.log("Error getting documents: ", error);
+                               });
+  }
+
+  getEmployeeCountry(name: any) {
+    var data;
+    return firebase.firestore().collection('empleados')
+                               .where('name', '==', name)
+                               .limit(1)
+                               .get()
+                               .then((querySnapshot) => {
+                                 querySnapshot.forEach((doc) => {
+                                     data = doc.data()['country'];
+                                 });
+                                 return data;
+                               })
+                               .catch((error) => {
+                                 console.log("Error getting documents: ", error);
+                               });
+  }
 }

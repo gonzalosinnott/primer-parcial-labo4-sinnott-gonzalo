@@ -9,6 +9,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AltaComponent } from './alta/alta.component';
 import { FormComponent } from './alta/form/form.component';
 import { PaisesComponent } from './alta/paises/paises.component';
+import { DetalleComponent } from './detalle/detalle.component';
+import { ListaComponent } from './detalle/lista/lista.component';
+import { DetalleEmpleadoComponent } from './detalle/detalle-empleado/detalle-empleado.component';
+import { DetallePaisComponent } from './detalle/detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { PaisesComponent } from './alta/paises/paises.component';
     AltaComponent,
     FormComponent,
     PaisesComponent,
+    DetalleComponent,
+    ListaComponent,
+    DetalleEmpleadoComponent,
+    DetallePaisComponent,
   ],
   imports: [
     CommonModule,
@@ -28,3 +36,4 @@ import { PaisesComponent } from './alta/paises/paises.component';
   ]
 })
 export class DashboardModule { }
+

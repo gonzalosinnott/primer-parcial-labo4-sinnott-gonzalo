@@ -1,0 +1,5 @@
+<h6>DETALLE DEL PAIS {{countryName}}</h6>
+<hr>
+<p *ngIf="data != null">CAPITAL: {{data.capital}}</p>
+<p *ngIf="data != null">CONTINENTE:{{data.continents}}</p>
+<p *ngIf="data != null">BANDERA: <img style="width: 30px" src="{{data.flags.png}}" alt="flag"></p>

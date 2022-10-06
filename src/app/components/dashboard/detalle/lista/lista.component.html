@@ -1,0 +1,34 @@
+<h6 class="text-center">EMPLEADOS</h6>
+
+<table class="table text-center" >   
+
+    <thead>
+      <tr>
+        <th scope="col">DNI</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">EDAD</th>
+        <th scope="col">PAIS DE ORIGEN</th>
+        <th scope="col">CAPACIDAD</th>
+        <th scope="col">UNIDAD PROPIA</th>
+        <th scope="col">DETALLE</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let employee of employees">
+
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.country}}</td>
+        <td>{{employee.capacity}}</td>
+        <td><div *ngIf="employee.ownTransport; else elseBlock">SI</div><ng-template #elseBlock>NO</ng-template></td>
+        <td>
+            <button type="button" 
+            class="btn btn-outline-success"
+            style="width: 75%;"
+            value="{{employee.name}}"
+            (click)="selectEmployee($event)" >VER</button>
+        </td>
+</tr>
+
+  </table>
+
